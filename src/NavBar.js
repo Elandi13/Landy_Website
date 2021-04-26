@@ -5,15 +5,12 @@ export default function NavBar() {
     return (
         <nav className="nav-bar">
             <div className="user-nav-div">
-                <NavLink exact to={"/about"}>
+                {/* <NavLink exact to={"/about"}>
                     About Us
-                </NavLink>
-                <NavLink exact to={"/contact"}>
-                    Contact Us
                 </NavLink>
                 <NavLink exact to={"/products"}>
                     Products
-                </NavLink>
+                </NavLink> */}
             </div>
         </nav>
     )

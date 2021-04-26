@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Card } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export default function About() {
+export default function About(language, isEnglish) {
+    
     return (
         <div className="about-card">
-            <Card className="mb-3" style ={{ color: "#000" }}>
+           {language.isEnglish ? <Card className="mb-3" style ={{ color: "#000" }}>
                 {/* <Card.Img src= "https://image.shutterstock.com/image-illustration/about-us-linear-text-arrow-600w-407476792.jpg"/>  */}
                 <Card.Header> About us
                 <Card.Body>
@@ -30,7 +31,7 @@ export default function About() {
                     </Card.Text>
                 </Card.Body>
                 </Card.Header>
-            </Card>
+            </Card> : <p> Hola </p>}
         </div>
     )
 }
