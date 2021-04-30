@@ -1,39 +1,63 @@
 import React, {useState} from 'react'
 import { Card } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { useTranslation } from 'react-i18next';
+import { FaPhoneSquare, FaFacebookSquare } from "react-icons/fa"
+import { MdEmail } from "react-icons/md"
 
 
-export default function About(language, isEnglish) {
+export default function About() {
+    const { t, i18n } = useTranslation();
+    const [language, setLanguage] = useState('en');
+    const [isEnglish, setIsEnglish] = useState(true)
     
+    
+    function handleClick(lang){
+        i18n.changeLanguage(lang);
+        setLanguage(lang)
+        if (lang === "spa"){
+            setIsEnglish(false)
+        } else {setIsEnglish(true)}
+      }
+
     return (
         <div className="about-card">
-           {language.isEnglish ? <Card className="mb-3" style ={{ color: "#000" }}>
-                {/* <Card.Img src= "https://image.shutterstock.com/image-illustration/about-us-linear-text-arrow-600w-407476792.jpg"/>  */}
+           <Card className="mb-3" style ={{ color: "#000" }}>
+            {!isEnglish ? <button onClick={()=> handleClick('en')}> English </button> :
+            <button onClick={()=> handleClick('spa')}> Español </button>}
                 <Card.Header>
-                     About us
+                     {t('Header.1')}
                 <Card.Body>
                     <Card.Title>
-                        Who are we?
+                    {t('Title.1')}
                     </Card.Title>
+
                     <Card.Text>
-                        We are the lead distrubters in BBCOS hair products, based in New York City. We offer various products to keep your hair in prestine condition. We are here to help find the right product for you. Contact us today for more information! 
+                     {t('Body.1')}
                     </Card.Text>
                     <Card.Title>
                         BBCOS
                     </Card.Title>
                     <Card.Text>
-                    100% Made in Italy, The company and its production are located in Cherasco in the province of Cuneo. A strategic position capable of guaranteeing worldwide distribution and quickly reaching the main Italian cities including Milan, the capital par excellence of fashion and the most innovative trends in the hairstyle and beauty sector.
-                    BBcos hair pro was born as a spokesperson for all questions of look and to be the best ally of hair stylists in their beauty salons. A high-end brand that creates and manufactures professional hair care and well-being products. The Made in Italy heart is the distinctive trait and the added value that allows us to confirm a style recognized all over the world.
+                     {t('Body2.2')}
                     </Card.Text>
                     <Card.Title>
-                        Products
+                     {t('Title2.2')} 
                     </Card.Title>
                     <Card.Text>
-                        We offer many products 
+                    <FaPhoneSquare /> 
+                    <a href="tel: +1 718-381-0832" > (718) 381-0832 </a>
+                        <br/>
+                        <MdEmail/>
+                    <a href={"mailto: landyshairpny@gmail.com "}> Email</a>
+                         <br/>
+                         <FaFacebookSquare/>
+                    <a href={"https://www.facebook.com/Landys-Hair-Products-NY-361435273965286/"} > FaceBook </a>
                     </Card.Text>
                 </Card.Body>
                 </Card.Header>
-            </Card> : <p> Hola </p>}
+            </Card>
         </div>
     )
 }
+

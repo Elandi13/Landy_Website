@@ -1,11 +1,21 @@
 {
-    "Translate" : {
-        "1": "Traduce esto por favor"
+    "Header" : {
+        "1": "Sobre nosotros"
     },
-    "This" : {
-        "1" : "esto"
+
+    "Title" : {
+        "1" : "Quienes somos nosotras?"
     },
-    "Please" : {
-        "1" : "por favor"
+
+    "Title2" : {
+        "2" : "Contacta con nosotras"
+    },
+
+    "Body" : {
+        "1" : "Somos los distribuidores principales de productos para el cabello BBCOS, con sede en la ciudad de Nueva York. Ofrecemos varios productos para mantener tu cabello en estado pretinado. Estamos aquí para ayudarlo a encontrar el producto adecuado para usted. ¡Contáctanos hoy para más información!"
+    },
+
+    "Body2" : {
+        "2" : "100% Made in Italy, La empresa y su producción están ubicadas en Cherasco en la provincia de Cuneo. Una posición estratégica capaz de garantizar la distribución mundial y llegar rápidamente a las principales ciudades italianas como Milán, la capital por excelencia de la moda y las tendencias más innovadoras en el sector del peinado y la belleza. BBCOs hair pro nace como portavoz de todas las cuestiones de look y para ser el mejor aliado de los estilistas en sus salones de belleza. Una marca de alta gama que crea y fabrica productos profesionales para el cuidado y el bienestar del cabello. El corazón Made in Italy es el rasgo distintivo y el valor agregado que nos permite confirmar un estilo reconocido en todo el mundo."
     }
 }
