@@ -42,8 +42,8 @@ function App() {
       <button onClick={()=> handleClick('en')}> English </button>
       <button onClick={()=> handleClick('spa')}> Spanish </button>
       <p>{t('Translate.1')}</p>
-      <p>{t('This.1')}</p>
-      <p>{t('Please.1')}</p>
+      {/* <p>{t('This.1')}</p>
+      <p>{t('Please.1')}</p> */}
 
       <NavBar/>
       <About language={language} isEnglish={isEnglish}/>
